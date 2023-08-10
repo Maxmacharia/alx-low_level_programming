@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <unistd.h>
 
 /**
@@ -11,8 +12,6 @@
 
 int main(void)
 {
-	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n"
-
-	write(1, quo, 59);
+	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
 	return (1);
 }
