@@ -15,7 +15,7 @@ void print_times_table(int n)
 	if (n <= 15 && n >= 0)
 	{
 		number = 0;
-		while (number <= 0)
+		while (number <= n)
 		{
 			_putchar(48);
 			multiple = 1;
@@ -31,10 +31,12 @@ void print_times_table(int n)
 				if (product >= 100)
 				{
 					_putchar((product / 100) + 48);
-					_putchar((product / 10) % 10 + 48);
+					_putchar(((product / 10) % 10) + 48);
 				}
 				else if (product <= 99 && product >= 10)
+				{
 					_putchar((product / 10) + 48);
+				}
 				_putchar((product % 10) + 48);
 				multiple++;
 			}
