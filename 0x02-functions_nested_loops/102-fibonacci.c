@@ -22,7 +22,7 @@ int main(void)
 		if (hesabu == 49)
 			printf("\n");
 		else
-			printf(",");
+			printf(", ");
 		hesabu++;
 	}
 	return (0);
