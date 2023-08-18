@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * print_numbers - function to print numbers 0-9
+ * print_most_numbers - function to print numbers 0-9
  *
  */
 
 void print_most_numbers(void)
 {
-	char n;
+	int a;
 
-	n = 48;
-	while (n <= 57)
+	a = 0;
+	while (a <= 9)
 	{
-		if (!(n == 50 || n == 52))
-			_putchar(n);
-		n++;
+		if (!(a == 2 || a == 4))
+		{
+			_putchar(a + 48);
+		}
+		a++;
 	}
 	_putchar('\n');
 }
