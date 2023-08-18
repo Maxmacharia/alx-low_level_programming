@@ -15,10 +15,10 @@ void print_diagonal(int n)
 	{
 		int a, b;
 
-		a = 0;
+		a = 1;
 		while (a <= n)
 		{
-			b = 0;
+			b = 1;
 			while (b <= n)
 			{
 				if (b == a)
