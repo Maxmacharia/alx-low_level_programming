@@ -11,17 +11,14 @@
 void rev_string(char *s)
 {
 	int i = 0;
-	int rep = 0;
 
 	while (s[i])
 	{
 		i++;
 	}
-	rep = --i;
-	while (rep >= 0)
+	while (i--)
 	{
-		rep--;
-		putchar(s[rep]);
+		putchar(s[i]);
 	}
 	putchar('\n');
 }
