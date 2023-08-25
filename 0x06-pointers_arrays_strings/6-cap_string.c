@@ -1,70 +1,43 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
+
 /**
- * islower - function to check for lowercase letters
+ * cap_string - function to capitalize every word
  *
- * @c: string to be returned
+ * @str: string to be returned
  *
- * Return: string
+ * Return: Always string
  *
  */
 
-int islower(char c)
+char *cap_string(char *str)
 {
-	return (c >= 97 && c <= 122);
-}
-/**
- * isdelimiter - function to determine special characters
- *
- * @c: string
- *
- * Return: always 0 (Success)
- *
- */
-int isdelimiter(char c)
-{
-	int a;
-	char delimiter[] = "\t\n,.!?\"(){}";
+	int element = 0;
 
-	a = 0;
-	while (a < 12)
+	while (str[element])
 	{
-		if (c == delimiter[a])
-		{
-			return (1);
-		}
-		a++;
-	}
-	return (0);
-}
-/**
- * cap_string - function to captialize all words
- *
- * @b: the string to be used
- *
- * Return: Always prt
- *
- */
-char *cap_string(char *b)
-{
-	char *pls = b;
-	int discovered = 1;
+		while (!(str[element] >= 97 && str[element] <= 122))
+			element++;
 
-	while (*b)
-	{
-		if (isdelimiter(*b))
-			discovered = 1;
-		else if (islower(*b) && discovered)
-		{
-			*b = *b - 32;
-			discovered = 0;
-		}
-		else
-		{
-			discovered = 0;
-		}
-		b++;
+		if (str[element - 1] == ' ' ||
+		    str[element - 1] == '\t' ||
+		    str[element - 1] == '\n' ||
+		    str[element - 1] == ',' ||
+		    str[element - 1] == ';' ||
+		    str[element - 1] == '.' ||
+		    str[element - 1] == '!' ||
+		    str[element - 1] == '?' ||
+		    str[element - 1] == '"' ||
+		    str[element - 1] == '(' ||
+		    str[element - 1] == ')' ||
+		    str[element - 1] == '{' ||
+		    str[element - 1] == '}' ||
+		    element == 0)
+			str[element] -= 32;
+
+		element++;
 	}
-	return (pls);
+
+	return (str);
 }
+
