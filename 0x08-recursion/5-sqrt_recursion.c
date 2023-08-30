@@ -32,7 +32,7 @@ int square(int n, int value)
 	{
 		return (value);
 	}
-	else if (value * value > n)
+	else if (value * value < n)
 	{
 		return (square(n, value + 1));
 	}
