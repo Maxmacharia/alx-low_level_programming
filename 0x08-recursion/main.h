@@ -12,5 +12,8 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int check(char *s, int begin, int stop, int center);
 int final_index(char *s);
+int wildcmp(char *s1, char *s2);
+char *paststar(char *s2);
+int incept(char *s1, char *s2);
 
 #endif
