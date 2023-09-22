@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void first(void) __attribute__ ((constructor));
+void 100_first(void) __attribute__ ((constructor));
 
 /**
  * struct list_s - singly linked list
