@@ -12,7 +12,7 @@ size_t free_listint_safe(listint_t **h)
 	size_t count = 0;
 	struct listint_s *tmp;
 
-	if (!head)
+	if (!h)
 		return (98);
 
 	while (*h)
